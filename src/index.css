@@ -1,4 +1,5 @@
 @import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
 
 @theme {
    --color-border: hsl(var(--border));
@@ -58,6 +59,11 @@
       transform: rotate(215deg) translateX(-500px);
       opacity: 0;
     }
+  }
+  @keyframes gradientFlow {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
   }
 }
 @layer base{
@@ -151,4 +157,21 @@
   margin:0 auto;
   padding: 0;
   text-align: center;
+}
+
+/* TagCloud Styles */
+.tagcloud {
+  display: inline-block;
+  color: hsl(var(--primary));
+}
+
+.tagcloud--item {
+  transition: all 0.3s ease;
+  text-shadow: 0 0 10px rgba(139, 92, 246, 0.4);
+}
+
+.tagcloud--item:hover {
+  color: hsl(var(--foreground));
+  text-shadow: 0 0 20px rgba(139, 92, 246, 0.8);
+  scale: 1.1;
 }
