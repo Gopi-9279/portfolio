@@ -55,10 +55,10 @@ export const HeroSection = () => {
           <h2 className="text-xl md:text-3xl font-medium text-muted-foreground mb-4 opacity-0 animate-fade-in">
             Hey, I'm a
           </h2>
-          <h1 className="text-5xl md:text-7xl lg:text-[7rem] font-black tracking-tighter leading-[0.9] flex flex-col">
+          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[7rem] font-black tracking-tighter leading-[0.9] flex flex-col">
             <span className="opacity-0 animate-fade-in-delay-1">Full Stack</span>
             <span className="opacity-0 animate-fade-in-delay-2">Developer</span>
-            <span className="opacity-0 animate-fade-in-delay-3 mt-2 text-4xl md:text-6xl lg:text-[5rem]">
+            <span className="opacity-0 animate-fade-in-delay-3 mt-2 text-3xl sm:text-4xl md:text-6xl lg:text-[5rem]">
               <span 
                 className="text-transparent bg-clip-text"
                 style={{
@@ -92,17 +92,17 @@ export const HeroSection = () => {
         </div>
 
         {/* Right Content - Photo & Orbs */}
-        <div className="relative w-full h-[50vh] lg:h-[80vh] flex items-center justify-center order-1 lg:order-2 opacity-0 animate-fade-in z-20">
+        <div className="relative w-full min-h-[400px] h-[50vh] lg:h-[80vh] flex items-center justify-center order-1 lg:order-2 opacity-0 animate-fade-in z-20">
           
           {/* Floating Tech Orbs */}
-          <div className="absolute top-1/4 -left-4 md:-left-12 w-16 h-16 rounded-full bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20 shadow-lg flex items-center justify-center animate-[float_6s_ease-in-out_infinite] z-30">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" className="w-8 h-8 drop-shadow-lg" />
+          <div className="absolute top-1/4 -left-0 sm:-left-4 md:-left-12 w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20 shadow-lg flex items-center justify-center animate-[float_6s_ease-in-out_infinite] z-30">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" className="w-6 h-6 sm:w-8 sm:h-8 drop-shadow-lg" />
           </div>
-          <div className="absolute bottom-1/4 -right-4 md:-right-8 w-20 h-20 rounded-full bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20 shadow-lg flex items-center justify-center animate-[float_8s_ease-in-out_infinite_reverse] z-30">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js" className="w-10 h-10 drop-shadow-lg" />
+          <div className="absolute bottom-1/4 -right-0 sm:-right-4 md:-right-8 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20 shadow-lg flex items-center justify-center animate-[float_8s_ease-in-out_infinite_reverse] z-30">
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js" className="w-8 h-8 sm:w-10 sm:h-10 drop-shadow-lg" />
           </div>
-          <div className="absolute top-10 right-8 w-12 h-12 rounded-full bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20 shadow-lg flex items-center justify-center animate-[float_5s_ease-in-out_infinite] z-30" style={{ animationDelay: '1s' }}>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="MongoDB" className="w-6 h-6 drop-shadow-lg" />
+          <div className="absolute top-10 right-4 sm:right-8 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20 shadow-lg flex items-center justify-center animate-[float_5s_ease-in-out_infinite] z-30" style={{ animationDelay: '1s' }}>
+            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="MongoDB" className="w-5 h-5 sm:w-6 sm:h-6 drop-shadow-lg" />
           </div>
 
           <Tilt 

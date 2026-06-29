@@ -94,10 +94,12 @@
     }
     html  {
         @apply scroll-smooth;
+        overflow-x: hidden;
     }
     body  {
         @apply bg-background text-foreground transition-colors duration-300;
         font-feature-settings: "rlig" 1, "calt" 1;
+        overflow-x: hidden;
     }
 }
 @utility container {

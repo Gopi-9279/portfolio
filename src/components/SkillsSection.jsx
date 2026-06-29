@@ -34,6 +34,7 @@ export const SkillsSection = () => {
 
     // Helper to calculate radius based on screen size
     const getRadius = () => {
+      if (window.innerWidth < 400) return 140; // For very small phones
       if (window.innerWidth < 640) return 180;
       if (window.innerWidth < 1024) return 280;
       return 350; // Increased radius for boxes

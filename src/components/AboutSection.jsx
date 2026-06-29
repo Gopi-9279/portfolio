@@ -42,12 +42,12 @@ export const AboutSection = () => {
                 <p>
                   <span className="text-pink-500">const</span> <span className="text-blue-400">developer</span> = <span className="text-yellow-300">{`{`}</span>
                 </p>
-                <div className="pl-4 sm:pl-8 space-y-2">
+                <div className="pl-2 sm:pl-8 space-y-2">
                   <p><span className="text-white/70">name:</span> <span className="text-green-300">"Gopi Kishan"</span>,</p>
                   <p><span className="text-white/70">role:</span> <span className="text-green-300">"Full Stack Developer (MERN)"</span>,</p>
                   <p><span className="text-white/70">education:</span> <span className="text-green-300">"B.Tech CSE"</span>,</p>
                   <p><span className="text-white/70">passions:</span> [</p>
-                  <div className="pl-4 sm:pl-8 text-green-300">
+                  <div className="pl-2 sm:pl-8 text-green-300">
                     <TypeAnimation
                       sequence={[
                         '"Building scalable web apps",\n"Solving complex DSA problems",\n"Delivering elegant UX"',
