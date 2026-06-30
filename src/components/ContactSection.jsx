@@ -1,12 +1,11 @@
 import {
-    Facebook,
+  Facebook,
   Instagram,
   Linkedin,
   Mail,
   MapPin,
   Phone,
   Send,
-  Twitch,
   Twitter,
 } from "lucide-react";
 import { cn } from "@/lib/utils";
@@ -31,7 +30,7 @@ export const ContactSection = () => {
     }, 1500);
   };
   return (
-    <section id="contact" className="py-24 px-4 relative z-10">
+    <section id="contact" className="py-20 sm:py-24 px-4 relative z-10">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-4 text-center">
           Get In <span className="text-primary"> Touch</span>
@@ -42,7 +41,7 @@ export const ContactSection = () => {
           I'm always open to discussing new opportunities.
         </p>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 lg:gap-12">
           <div className="space-y-8">
             <h3 className="text-2xl font-semibold mb-6">
               {" "}
@@ -57,8 +56,8 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium text-foreground">Email</h4>
                   <a
-                    href="mailto:hello@gmail.com"
-                    className="text-muted-foreground hover:text-primary transition-colors text-sm"
+                    href="mailto:gopikishan6719@gmail.com"
+                    className="text-muted-foreground hover:text-primary transition-colors text-sm break-all"
                   >
                     gopikishan6719@gmail.com
                   </a>
@@ -71,7 +70,7 @@ export const ContactSection = () => {
                 <div>
                   <h4 className="font-medium text-foreground">Phone</h4>
                   <a
-                    href="tel:+11234567890"
+                    href="tel:+919279699164"
                     className="text-muted-foreground hover:text-primary transition-colors text-sm"
                   >
                     +91 9279699164
@@ -94,16 +93,16 @@ export const ContactSection = () => {
             <div className="pt-8">
               <h4 className="font-medium mb-4"> Connect With Me</h4>
               <div className="flex space-x-4 justify-center">
-                <a href="https://www.linkedin.com/in/gopi-kishan-2844aa314/" target="_blank" className="text-muted-foreground hover:text-primary hover:drop-shadow-[0_0_8px_var(--color-primary)] transition-all duration-300">
+                <a href="https://www.linkedin.com/in/gopi-kishan-2844aa314/" target="_blank" rel="noreferrer" aria-label="LinkedIn" className="text-muted-foreground hover:text-primary hover:drop-shadow-[0_0_8px_var(--color-primary)] transition-all duration-300">
                   <Linkedin />
                 </a>
-                <a href="https://x.com/GopiKishan84620" target="_blank" className="text-muted-foreground hover:text-primary hover:drop-shadow-[0_0_8px_var(--color-primary)] transition-all duration-300">
+                <a href="https://x.com/GopiKishan84620" target="_blank" rel="noreferrer" aria-label="Twitter" className="text-muted-foreground hover:text-primary hover:drop-shadow-[0_0_8px_var(--color-primary)] transition-all duration-300">
                   <Twitter />
                 </a>
-                <a href="https://www.instagram.com/gopikishan1729/" target="_blank" className="text-muted-foreground hover:text-primary hover:drop-shadow-[0_0_8px_var(--color-primary)] transition-all duration-300">
+                <a href="https://www.instagram.com/gopikishan1729/" target="_blank" rel="noreferrer" aria-label="Instagram" className="text-muted-foreground hover:text-primary hover:drop-shadow-[0_0_8px_var(--color-primary)] transition-all duration-300">
                   <Instagram />
                 </a>
-                <a href="#" target="_blank" className="text-muted-foreground hover:text-primary hover:drop-shadow-[0_0_8px_var(--color-primary)] transition-all duration-300">
+                <a href="#" target="_blank" rel="noreferrer" aria-label="Facebook" className="text-muted-foreground hover:text-primary hover:drop-shadow-[0_0_8px_var(--color-primary)] transition-all duration-300">
                   <Facebook />
                 </a>
               </div>
@@ -111,7 +110,7 @@ export const ContactSection = () => {
           </div>
 
           <form
-            className="relative h-fit space-y-6 p-8 flex flex-col justify-between rounded-xl bg-white/40 dark:bg-black/40 border border-primary/30 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.1)] dark:shadow-[0_0_20px_rgba(0,0,0,0.5)] group hover:border-primary/60 transition-all duration-500"
+            className="relative h-fit space-y-6 p-5 sm:p-8 flex flex-col justify-between rounded-xl bg-white/40 dark:bg-black/40 border border-primary/30 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.1)] dark:shadow-[0_0_20px_rgba(0,0,0,0.5)] group hover:border-primary/60 transition-all duration-500"
             onSubmit={handleSubmit}
           >
             <h3 className="text-2xl font-semibold mb-6 text-foreground"> Send a Message</h3>
@@ -129,7 +128,7 @@ export const ContactSection = () => {
                   name="name"
                   required
                   className="w-full px-4 py-3 rounded-md border border-primary/30 bg-white/50 dark:bg-black/20 text-foreground focus:outline-hidden focus:border-primary focus:shadow-[0_0_15px_var(--color-primary)] transition-all duration-300 placeholder:text-muted-foreground/70 dark:placeholder:text-muted-foreground/50 backdrop-blur-sm"
-                  placeholder="Pedro Machado..."
+                  placeholder="Gopi Kishan"
                 />
               </div>
 
@@ -146,7 +145,7 @@ export const ContactSection = () => {
                   name="email"
                   required
                   className="w-full px-4 py-3 rounded-md border border-primary/30 bg-white/50 dark:bg-black/20 text-foreground focus:outline-hidden focus:border-primary focus:shadow-[0_0_15px_var(--color-primary)] transition-all duration-300 placeholder:text-muted-foreground/70 dark:placeholder:text-muted-foreground/50 backdrop-blur-sm"
-                  placeholder="john@gmail.com"
+                  placeholder="you@example.com"
                 />
               </div>
 

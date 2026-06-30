@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import TagCloud from "TagCloud";
 
 const skillsData = [
@@ -27,27 +27,35 @@ const skillElements = skillsData.map(skill => `
 
 export const SkillsSection = () => {
   const containerRef = useRef(null);
+  const [isCompact, setIsCompact] = useState(() =>
+    typeof window !== "undefined" ? window.innerWidth < 768 : false
+  );
 
   useEffect(() => {
+    const handleViewport = () => setIsCompact(window.innerWidth < 768);
+    handleViewport();
+    window.addEventListener("resize", handleViewport);
+    return () => window.removeEventListener("resize", handleViewport);
+  }, []);
+
+  useEffect(() => {
+    if (isCompact) return;
+
     const container = containerRef.current;
     if (!container) return;
 
     // Helper to calculate radius based on screen size
     const getRadius = () => {
-      if (window.innerWidth < 400) return 140; // For very small phones
-      if (window.innerWidth < 640) return 180;
       if (window.innerWidth < 1024) return 280;
       return 350; // Increased radius for boxes
     };
-
-    let tagCloudInstance = null;
 
     const initTagCloud = () => {
       // Clear previous tags
       container.innerHTML = "";
       
       // Initialize TagCloud
-      tagCloudInstance = TagCloud(container, skillElements, {
+      TagCloud(container, skillElements, {
         radius: getRadius(),
         maxSpeed: "fast",
         initSpeed: "normal",
@@ -78,22 +86,35 @@ export const SkillsSection = () => {
       window.removeEventListener("resize", handleResize);
       container.innerHTML = "";
     };
-  }, []);
+  }, [isCompact]);
 
   return (
-    <section id="skills" className="py-24 px-4 relative z-10 overflow-hidden">
+    <section id="skills" className="py-20 sm:py-24 px-4 relative z-10 overflow-hidden">
       <div className="container mx-auto max-w-5xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
           My <span className="text-primary"> Skills</span>
         </h2>
         
-        <div className="flex justify-center items-center w-full min-h-[500px] md:min-h-[800px]">
-          {/* We apply styling to the TagCloud text items here via global CSS or Tailwind classes in parent */}
-          <div 
-            ref={containerRef} 
-            className="flex justify-center items-center cursor-pointer"
-          ></div>
-        </div>
+        {isCompact ? (
+          <div className="grid grid-cols-2 min-[420px]:grid-cols-3 gap-4">
+            {skillsData.map((skill) => (
+              <div
+                key={skill.name}
+                className="flex min-h-28 flex-col items-center justify-center gap-3 rounded-2xl bg-white/40 dark:bg-black/40 backdrop-blur-md border border-primary/20 p-4 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-primary/70 hover:shadow-[0_0_20px_rgba(139,92,246,0.35)]"
+              >
+                <img src={skill.icon} alt={skill.name} className="h-10 w-10 object-contain drop-shadow-md" loading="lazy" />
+                <span className="text-sm font-semibold text-foreground text-center leading-tight">{skill.name}</span>
+              </div>
+            ))}
+          </div>
+        ) : (
+          <div className="flex justify-center items-center w-full min-h-[620px] lg:min-h-[760px]">
+            <div
+              ref={containerRef}
+              className="flex justify-center items-center cursor-pointer"
+            ></div>
+          </div>
+        )}
       </div>
     </section>
   );

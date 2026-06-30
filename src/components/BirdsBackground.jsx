@@ -1,7 +1,6 @@
-import { useState, useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 
 export const BirdsBackground = () => {
-  const [vantaEffect, setVantaEffect] = useState(null);
   const myRef = useRef(null);
 
   useEffect(() => {
@@ -30,7 +29,6 @@ export const BirdsBackground = () => {
         cohesion: 20.0,
         quantity: 5.0 // More birds for better aesthetics
       });
-      setVantaEffect(effect);
     }
     
     return () => {

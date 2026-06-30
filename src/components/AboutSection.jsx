@@ -5,7 +5,7 @@ import Tilt from "react-parallax-tilt";
 
 export const AboutSection = () => {
   return (
-    <section id="about" className="py-24 px-4 relative z-10">
+    <section id="about" className="py-20 sm:py-24 px-4 relative z-10">
       <div className="container mx-auto max-w-6xl">
         <h2 className="text-3xl md:text-4xl font-bold mb-12 text-center">
           About <span className="text-primary"> Me</span>
@@ -38,11 +38,11 @@ export const AboutSection = () => {
               </div>
               
               {/* Terminal Content */}
-              <div className="p-6 sm:p-8 text-sm md:text-base font-mono text-green-400 flex-1 flex flex-col gap-2">
+              <div className="p-4 sm:p-8 text-xs sm:text-sm md:text-base font-mono text-green-400 flex-1 flex flex-col gap-2 overflow-x-auto text-left">
                 <p>
                   <span className="text-pink-500">const</span> <span className="text-blue-400">developer</span> = <span className="text-yellow-300">{`{`}</span>
                 </p>
-                <div className="pl-2 sm:pl-8 space-y-2">
+                <div className="pl-2 sm:pl-8 space-y-2 min-w-0 break-words">
                   <p><span className="text-white/70">name:</span> <span className="text-green-300">"Gopi Kishan"</span>,</p>
                   <p><span className="text-white/70">role:</span> <span className="text-green-300">"Full Stack Developer (MERN)"</span>,</p>
                   <p><span className="text-white/70">education:</span> <span className="text-green-300">"B.Tech CSE"</span>,</p>
@@ -69,13 +69,13 @@ export const AboutSection = () => {
                 
                 {/* Action Buttons */}
                 <div className="mt-auto pt-8 flex flex-col sm:flex-row gap-4 font-sans">
-                  <a href="#contact" className="cosmic-button shadow-[0_0_15px_var(--color-primary)] hover:shadow-[0_0_25px_var(--color-primary)] text-center flex-1">
+                  <a href="#contact" className="cosmic-button shadow-[0_0_15px_var(--color-primary)] hover:shadow-[0_0_25px_var(--color-primary)] text-center flex-1 text-sm sm:text-base">
                     Execute Contact.sh
                   </a>
                   <a
                     href={resumePdf}
                     download="GopiKishanResume.pdf"
-                    className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/20 backdrop-blur-sm transition-all duration-300 hover:shadow-[0_0_15px_var(--color-primary)] text-center flex items-center justify-center font-medium flex-1"
+                    className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/20 backdrop-blur-sm transition-all duration-300 hover:shadow-[0_0_15px_var(--color-primary)] text-center flex items-center justify-center font-medium flex-1 text-sm sm:text-base"
                   >
                     Download Resume.pdf
                   </a>

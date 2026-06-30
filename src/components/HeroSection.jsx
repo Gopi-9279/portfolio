@@ -9,6 +9,7 @@ const MagneticButton = ({ children, className, href }) => {
   const [position, setPosition] = useState({ x: 0, y: 0 });
 
   const handleMouseMove = (e) => {
+    if (!window.matchMedia("(pointer: fine)").matches) return;
     if (!buttonRef.current) return;
     const { clientX, clientY } = e;
     const { left, top, width, height } = buttonRef.current.getBoundingClientRect();
@@ -46,19 +47,19 @@ export const HeroSection = () => {
   return (
     <section
       id="hero"
-      className="relative min-h-screen flex items-center justify-center px-4 pt-20 z-10"
+      className="relative min-h-[100svh] flex items-center justify-center px-4 pt-24 pb-16 z-10"
     >
-      <div className="container w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+      <div className="container w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
         
         {/* Left Content - Typography */}
-        <div className="space-y-4 z-20 text-left order-2 lg:order-1">
-          <h2 className="text-xl md:text-3xl font-medium text-muted-foreground mb-4 opacity-0 animate-fade-in">
+        <div className="space-y-4 z-20 text-center sm:text-left order-2 lg:order-1">
+          <h2 className="text-lg sm:text-xl md:text-3xl font-medium text-muted-foreground mb-3 sm:mb-4 opacity-0 animate-fade-in">
             Hey, I'm a
           </h2>
-          <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-[7rem] font-black tracking-tighter leading-[0.9] flex flex-col">
+          <h1 className="text-[clamp(2.65rem,13vw,4.8rem)] md:text-7xl lg:text-[7rem] font-black leading-[0.9] flex flex-col">
             <span className="opacity-0 animate-fade-in-delay-1">Full Stack</span>
             <span className="opacity-0 animate-fade-in-delay-2">Developer</span>
-            <span className="opacity-0 animate-fade-in-delay-3 mt-2 text-3xl sm:text-4xl md:text-6xl lg:text-[5rem]">
+            <span className="opacity-0 animate-fade-in-delay-3 mt-2 text-[clamp(2rem,10vw,3.8rem)] md:text-6xl lg:text-[5rem]">
               <span 
                 className="text-transparent bg-clip-text"
                 style={{
@@ -72,8 +73,8 @@ export const HeroSection = () => {
             </span>
           </h1>
 
-          <div className="mt-8 opacity-0 animate-fade-in-delay-4 space-y-4 max-w-lg">
-            <p className="text-xl md:text-2xl font-medium text-foreground">
+          <div className="mt-8 opacity-0 animate-fade-in-delay-4 space-y-4 max-w-lg mx-auto sm:mx-0">
+            <p className="text-lg sm:text-xl md:text-2xl font-medium text-foreground">
               Aspiring Software Developer
             </p>
             <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
@@ -81,10 +82,10 @@ export const HeroSection = () => {
             </p>
           </div>
 
-          <div className="pt-8 opacity-0 animate-fade-in-delay-4">
+          <div className="pt-6 sm:pt-8 opacity-0 animate-fade-in-delay-4">
             <MagneticButton 
               href="#projects" 
-              className="cosmic-button text-lg px-8 py-4 uppercase tracking-widest font-bold shadow-[0_0_15px_var(--color-primary)] hover:shadow-[0_0_25px_var(--color-primary)]"
+              className="cosmic-button text-sm sm:text-lg px-6 sm:px-8 py-3 sm:py-4 uppercase tracking-widest font-bold shadow-[0_0_15px_var(--color-primary)] hover:shadow-[0_0_25px_var(--color-primary)]"
             >
               View My Work
             </MagneticButton>
@@ -92,13 +93,13 @@ export const HeroSection = () => {
         </div>
 
         {/* Right Content - Photo & Orbs */}
-        <div className="relative w-full min-h-[400px] h-[50vh] lg:h-[80vh] flex items-center justify-center order-1 lg:order-2 opacity-0 animate-fade-in z-20">
+        <div className="relative w-full min-h-[300px] h-[42vh] max-h-[460px] lg:h-[80vh] lg:max-h-[680px] flex items-center justify-center order-1 lg:order-2 opacity-0 animate-fade-in z-20">
           
           {/* Floating Tech Orbs */}
-          <div className="absolute top-1/4 -left-0 sm:-left-4 md:-left-12 w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20 shadow-lg flex items-center justify-center animate-[float_6s_ease-in-out_infinite] z-30">
+          <div className="absolute top-1/4 left-1 sm:-left-4 md:-left-12 w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20 shadow-lg flex items-center justify-center animate-[float_6s_ease-in-out_infinite] z-30">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" className="w-6 h-6 sm:w-8 sm:h-8 drop-shadow-lg" />
           </div>
-          <div className="absolute bottom-1/4 -right-0 sm:-right-4 md:-right-8 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20 shadow-lg flex items-center justify-center animate-[float_8s_ease-in-out_infinite_reverse] z-30">
+          <div className="absolute bottom-1/4 right-1 sm:-right-4 md:-right-8 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20 shadow-lg flex items-center justify-center animate-[float_8s_ease-in-out_infinite_reverse] z-30">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js" className="w-8 h-8 sm:w-10 sm:h-10 drop-shadow-lg" />
           </div>
           <div className="absolute top-10 right-4 sm:right-8 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20 shadow-lg flex items-center justify-center animate-[float_5s_ease-in-out_infinite] z-30" style={{ animationDelay: '1s' }}>
