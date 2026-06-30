@@ -17,7 +17,7 @@ const MagneticButton = ({ children, className, href }) => {
     const centerY = top + height / 2;
     const distanceX = clientX - centerX;
     const distanceY = clientY - centerY;
-    
+
     // Magnetic pull strength
     setPosition({ x: distanceX * 0.2, y: distanceY * 0.2 });
   };
@@ -49,87 +49,76 @@ export const HeroSection = () => {
       id="hero"
       className="relative min-h-[100svh] flex items-center justify-center px-4 pt-24 pb-16 z-10"
     >
-      <div className="container w-full max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-12 items-center">
-        
-        {/* Left Content - Typography */}
-        <div className="space-y-4 z-20 text-center sm:text-left order-2 lg:order-1">
-          <h2 className="text-lg sm:text-xl md:text-3xl font-medium text-muted-foreground mb-3 sm:mb-4 opacity-0 animate-fade-in">
-            Hey, I'm a
-          </h2>
-          <h1 className="text-[clamp(2.65rem,13vw,4.8rem)] md:text-7xl lg:text-[7rem] font-black leading-[0.9] flex flex-col">
-            <span className="opacity-0 animate-fade-in-delay-1">Full Stack</span>
-            <span className="opacity-0 animate-fade-in-delay-2">Developer</span>
-            <span className="opacity-0 animate-fade-in-delay-3 mt-2 text-[clamp(2rem,10vw,3.8rem)] md:text-6xl lg:text-[5rem]">
-              <span 
-                className="text-transparent bg-clip-text"
-                style={{
-                  backgroundImage: 'linear-gradient(to right, hsl(var(--primary)), #ec4899, hsl(var(--primary)))',
-                  backgroundSize: '200% auto',
-                  animation: 'gradientFlow 3s linear infinite'
-                }}
-              >
-                (MERN)
-              </span>
-            </span>
-          </h1>
 
-          <div className="mt-8 opacity-0 animate-fade-in-delay-4 space-y-4 max-w-lg mx-auto sm:mx-0">
-            <p className="text-lg sm:text-xl md:text-2xl font-medium text-foreground">
-              Aspiring Software Developer
-            </p>
-            <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-              Passionate about building scalable web applications and enhancing problem-solving skills. I have hands-on experience in MERN Stack development and a strong proficiency in Java and DSA.
-            </p>
-          </div>
+      {/* Huge Background Text */}
+      <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none overflow-hidden z-0 opacity-0 animate-fade-in-delay-1 w-full h-full leading-[0.75]">
+         <div className="text-[38vw] font-black tracking-tighter text-foreground/[0.07] dark:text-foreground/[0.05] whitespace-nowrap drop-shadow-sm">
+            WEB
+         </div>
+         <div className="text-[14.5vw] font-black tracking-tighter text-foreground/[0.07] dark:text-foreground/[0.05] whitespace-nowrap drop-shadow-sm">
+            DEVELOPER
+         </div>
+      </div>
 
-          <div className="pt-6 sm:pt-8 opacity-0 animate-fade-in-delay-4">
-            <MagneticButton 
-              href="#projects" 
-              className="cosmic-button text-sm sm:text-lg px-6 sm:px-8 py-3 sm:py-4 uppercase tracking-widest font-bold shadow-[0_0_15px_var(--color-primary)] hover:shadow-[0_0_25px_var(--color-primary)]"
-            >
-              View My Work
-            </MagneticButton>
-          </div>
-        </div>
+      <div className="container relative w-full h-full flex items-center justify-center mx-auto z-20">
 
-        {/* Right Content - Photo & Orbs */}
-        <div className="relative w-full min-h-[300px] h-[42vh] max-h-[460px] lg:h-[80vh] lg:max-h-[680px] flex items-center justify-center order-1 lg:order-2 opacity-0 animate-fade-in z-20">
-          
-          {/* Floating Tech Orbs */}
-          <div className="absolute top-1/4 left-1 sm:-left-4 md:-left-12 w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20 shadow-lg flex items-center justify-center animate-[float_6s_ease-in-out_infinite] z-30">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" className="w-6 h-6 sm:w-8 sm:h-8 drop-shadow-lg" />
-          </div>
-          <div className="absolute bottom-1/4 right-1 sm:-right-4 md:-right-8 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20 shadow-lg flex items-center justify-center animate-[float_8s_ease-in-out_infinite_reverse] z-30">
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js" className="w-8 h-8 sm:w-10 sm:h-10 drop-shadow-lg" />
-          </div>
-          <div className="absolute top-10 right-4 sm:right-8 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20 shadow-lg flex items-center justify-center animate-[float_5s_ease-in-out_infinite] z-30" style={{ animationDelay: '1s' }}>
-            <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="MongoDB" className="w-5 h-5 sm:w-6 sm:h-6 drop-shadow-lg" />
+        {/* Centered Content - Holographic Photo & Orbits */}
+        <div className="relative w-full min-h-[400px] flex items-center justify-center opacity-0 animate-fade-in">
+
+          {/* Orbital Rings Background */}
+          <div className="absolute w-[300px] h-[300px] sm:w-[450px] sm:h-[450px] lg:w-[600px] lg:h-[600px] rounded-full border border-primary/20 animate-[spin_30s_linear_infinite] pointer-events-none flex items-center justify-center z-10 hidden sm:flex">
+            {/* React Icon */}
+            <div className="absolute -top-6 sm:-top-8 animate-[spin_30s_linear_infinite_reverse]">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-card border border-border/50 shadow-[0_0_20px_rgba(139,92,246,0.3)] flex items-center justify-center pointer-events-auto hover:scale-110 transition-transform">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" className="w-6 h-6 sm:w-8 sm:h-8 drop-shadow-lg" />
+              </div>
+            </div>
+
+            {/* Node Icon */}
+            <div className="absolute -bottom-6 sm:-bottom-8 animate-[spin_30s_linear_infinite_reverse]">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-card border border-border/50 shadow-[0_0_20px_rgba(139,92,246,0.3)] flex items-center justify-center pointer-events-auto hover:scale-110 transition-transform">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js" className="w-6 h-6 sm:w-8 sm:h-8 drop-shadow-lg" />
+              </div>
+            </div>
           </div>
 
-          <Tilt 
-            tiltMaxAngleX={5} 
-            tiltMaxAngleY={5} 
-            glareEnable={true} 
-            glareMaxOpacity={0.2} 
+          <div className="absolute w-[450px] h-[450px] sm:w-[600px] sm:h-[600px] lg:w-[850px] lg:h-[850px] rounded-full border border-primary/10 animate-[spin_50s_linear_infinite_reverse] pointer-events-none flex items-center justify-center z-10 hidden lg:flex">
+            {/* Mongo Icon */}
+            <div className="absolute -left-6 sm:-left-8 animate-[spin_50s_linear_infinite]">
+              <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-card border border-border/50 shadow-[0_0_20px_rgba(139,92,246,0.3)] flex items-center justify-center pointer-events-auto hover:scale-110 transition-transform">
+                <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="MongoDB" className="w-6 h-6 sm:w-8 sm:h-8 drop-shadow-lg" />
+              </div>
+            </div>
+          </div>
+
+          {/* Glowing Aura */}
+          <div className="absolute inset-0 bg-primary/10 dark:bg-primary/20 blur-[100px] rounded-full z-0 transform scale-75 animate-pulse-subtle pointer-events-none"></div>
+
+          {/* Holographic Photo Card */}
+          <Tilt
+            tiltMaxAngleX={8}
+            tiltMaxAngleY={8}
+            glareEnable={true}
+            glareMaxOpacity={0.3}
+            glareColor="white"
             glarePosition="all"
-            className="relative w-full h-full max-h-[600px] max-w-[500px] mx-auto rounded-3xl"
+            className="relative w-[240px] h-[320px] sm:w-[320px] sm:h-[420px] lg:w-[380px] lg:h-[500px] rounded-[2rem] p-2 bg-white/80 dark:bg-gradient-to-br dark:from-white/20 dark:via-white/5 dark:to-white/10 backdrop-blur-xl border-2 border-white/60 dark:border-white/30 shadow-[0_20px_60px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.3)] z-20 group mx-auto"
           >
-            {/* The photo with a fade out at the bottom */}
-            <img 
-              src={profileImg} 
-              alt="Gopi Kishan" 
-              className="object-cover w-full h-full rounded-3xl relative z-10"
-              style={{
-                maskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)',
-                WebkitMaskImage: 'linear-gradient(to bottom, rgba(0,0,0,1) 60%, rgba(0,0,0,0) 100%)'
-              }}
-            />
-            
-            {/* Ambient glow behind photo matching theme */}
-            <div className="absolute inset-0 bg-primary/30 blur-[80px] rounded-full z-0 transform scale-100 animate-pulse-subtle pointer-events-none"></div>
+            <div className="relative w-full h-full rounded-[1.5rem] overflow-hidden bg-card border border-border/50">
+              <img
+                src={profileImg}
+                alt="Gopi Kishan"
+                className="object-cover w-full h-full transform group-hover:scale-105 transition-transform duration-700 ease-out"
+              />
+
+              {/* Inner Vignette / Shadow */}
+              <div className="absolute inset-0 shadow-[inset_0_0_50px_rgba(0,0,0,0.3)] pointer-events-none transition-opacity duration-700"></div>
+
+              {/* Holographic shifting overlay */}
+              <div className="absolute inset-0 bg-linear-to-tr from-primary/30 via-transparent to-pink-500/30 opacity-0 group-hover:opacity-100 mix-blend-overlay transition-opacity duration-700 pointer-events-none"></div>
+            </div>
           </Tilt>
         </div>
-
       </div>
 
       <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex flex-col items-center animate-bounce z-20 hidden md:flex">

@@ -23,7 +23,7 @@ export const AboutSection = () => {
             glarePosition="all" 
             className="lg:col-span-2 lg:row-span-2 h-full w-full"
           >
-            <div className="h-full flex flex-col rounded-2xl bg-[#0d1117] backdrop-blur-xl border border-white/10 shadow-2xl overflow-hidden relative group">
+            <div className="h-full flex flex-col rounded-3xl bg-[#0d1117] border border-white/10 shadow-[0_10px_40px_-10px_rgba(0,0,0,0.7)] overflow-hidden relative group">
               {/* Mac OS Header */}
               <div className="flex items-center px-4 py-3 bg-[#161b22] border-b border-white/10">
                 <div className="flex gap-2">
@@ -75,7 +75,7 @@ export const AboutSection = () => {
                   <a
                     href={resumePdf}
                     download="GopiKishanResume.pdf"
-                    className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/20 backdrop-blur-sm transition-all duration-300 hover:shadow-[0_0_15px_var(--color-primary)] text-center flex items-center justify-center font-medium flex-1 text-sm sm:text-base"
+                    className="px-6 py-2 rounded-full border border-primary text-primary hover:bg-primary/20 transition-all duration-300 hover:shadow-[0_0_15px_rgba(139,92,246,0.3)] text-center flex items-center justify-center font-medium flex-1 text-sm sm:text-base"
                   >
                     Download Resume.pdf
                   </a>
@@ -86,7 +86,7 @@ export const AboutSection = () => {
 
           {/* Box 2: Education */}
           <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} glareEnable={true} glareMaxOpacity={0.1} className="h-full w-full">
-            <div className="h-full p-6 rounded-2xl bg-white/40 dark:bg-black/20 backdrop-blur-md border border-primary/20 hover:border-primary/80 transition-all duration-300 hover:shadow-[0_0_20px_var(--color-primary)] flex flex-col justify-center gap-4 group">
+            <div className="h-full p-6 rounded-3xl bg-card border border-border shadow-lg hover:border-primary/50 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(139,92,246,0.15)] hover:-translate-y-1 flex flex-col justify-center gap-4 group">
               <div className="p-4 rounded-xl bg-primary/10 w-max group-hover:scale-110 transition-transform duration-300">
                 <GraduationCap className="h-8 w-8 text-primary" />
               </div>
@@ -95,7 +95,7 @@ export const AboutSection = () => {
                 <p className="text-foreground/90 font-medium mt-2">
                   Amity University Jharkhand (B.Tech CSE)
                 </p>
-                <p className="text-foreground/70 text-sm mt-1 font-mono bg-white/30 dark:bg-black/30 px-2 py-1 rounded-md inline-block">
+                <p className="text-foreground/70 text-sm mt-1 font-mono bg-muted px-2 py-1 rounded-md inline-block">
                   2023 - 2027 | CGPA: 8.11
                 </p>
               </div>
@@ -104,7 +104,7 @@ export const AboutSection = () => {
 
           {/* Box 3: Experience */}
           <Tilt tiltMaxAngleX={5} tiltMaxAngleY={5} glareEnable={true} glareMaxOpacity={0.1} className="h-full w-full">
-            <div className="h-full p-6 rounded-2xl bg-white/40 dark:bg-black/20 backdrop-blur-md border border-primary/20 hover:border-primary/80 transition-all duration-300 hover:shadow-[0_0_20px_var(--color-primary)] flex flex-col justify-center gap-4 group">
+            <div className="h-full p-6 rounded-3xl bg-card border border-border shadow-lg hover:border-primary/50 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(139,92,246,0.15)] hover:-translate-y-1 flex flex-col justify-center gap-4 group">
               <div className="p-4 rounded-xl bg-primary/10 w-max group-hover:scale-110 transition-transform duration-300">
                 <Briefcase className="h-8 w-8 text-primary" />
               </div>
@@ -113,7 +113,7 @@ export const AboutSection = () => {
                 <p className="text-foreground/90 font-medium mt-2">
                   Web Developer Intern @ Emancipation Edutech
                 </p>
-                <p className="text-foreground/70 text-sm mt-1 font-mono bg-white/30 dark:bg-black/30 px-2 py-1 rounded-md inline-block">
+                <p className="text-foreground/70 text-sm mt-1 font-mono bg-muted px-2 py-1 rounded-md inline-block">
                   Feb 2026 - Present
                 </p>
                 <p className="text-foreground/80 text-sm mt-2">
@@ -125,22 +125,22 @@ export const AboutSection = () => {
 
           {/* Box 4: Certifications (Spans 3 columns) */}
           <Tilt tiltMaxAngleX={2} tiltMaxAngleY={2} glareEnable={true} glareMaxOpacity={0.05} className="lg:col-span-3 w-full">
-            <div className="p-6 sm:p-8 rounded-2xl bg-white/40 dark:bg-black/20 backdrop-blur-md border border-primary/20 hover:border-primary/80 transition-all duration-300 hover:shadow-[0_0_20px_var(--color-primary)] flex flex-col sm:flex-row items-center gap-6 group">
+            <div className="p-6 sm:p-8 rounded-3xl bg-card border border-border shadow-lg hover:border-primary/50 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(139,92,246,0.15)] hover:-translate-y-1 flex flex-col sm:flex-row items-center gap-6 group">
               <div className="p-5 rounded-xl bg-primary/10 group-hover:rotate-12 transition-transform duration-300 flex-shrink-0">
                 <Award className="h-10 w-10 text-primary" />
               </div>
               <div className="flex-1 w-full">
                 <h4 className="font-bold text-xl text-foreground mb-4 text-center sm:text-left">Certifications</h4>
                 <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
-                  <div className="bg-white/30 dark:bg-black/30 p-4 rounded-lg border border-white/10 dark:border-white/5 hover:bg-white/50 dark:hover:bg-black/50 transition-colors">
+                  <div className="bg-background p-4 rounded-2xl border border-border/50 hover:border-primary/50 shadow-sm hover:shadow-md transition-all">
                     <p className="font-medium text-foreground text-sm">DSA using Python</p>
                     <p className="text-primary text-xs mt-1">NPTEL</p>
                   </div>
-                  <div className="bg-white/30 dark:bg-black/30 p-4 rounded-lg border border-white/10 dark:border-white/5 hover:bg-white/50 dark:hover:bg-black/50 transition-colors">
+                  <div className="bg-background p-4 rounded-2xl border border-border/50 hover:border-primary/50 shadow-sm hover:shadow-md transition-all">
                     <p className="font-medium text-foreground text-sm">OOP Fundamentals</p>
                     <p className="text-primary text-xs mt-1">NPTEL</p>
                   </div>
-                  <div className="bg-white/30 dark:bg-black/30 p-4 rounded-lg border border-white/10 dark:border-white/5 hover:bg-white/50 dark:hover:bg-black/50 transition-colors">
+                  <div className="bg-background p-4 rounded-2xl border border-border/50 hover:border-primary/50 shadow-sm hover:shadow-md transition-all">
                     <p className="font-medium text-foreground text-sm">DSA with Java</p>
                     <p className="text-primary text-xs mt-1">Apna College</p>
                   </div>

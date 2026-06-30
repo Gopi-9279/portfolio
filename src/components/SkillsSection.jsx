@@ -19,8 +19,8 @@ const skillsData = [
 
 // Generate HTML strings for TagCloud
 const skillElements = skillsData.map(skill => `
-  <div class="flex flex-col items-center justify-center w-20 h-20 sm:w-24 sm:h-24 p-2 rounded-2xl bg-white/40 dark:bg-black/40 backdrop-blur-md border border-white/40 dark:border-white/10 shadow-lg hover:shadow-[0_0_20px_rgba(139,92,246,0.6)] hover:bg-white/60 dark:hover:bg-black/60 transition-all duration-300 gap-2 pointer-events-auto">
-    <img src="${skill.icon}" alt="${skill.name}" class="w-8 h-8 sm:w-10 sm:h-10 object-contain drop-shadow-md" loading="lazy" />
+  <div class="flex flex-col items-center justify-center w-20 h-20 sm:w-24 sm:h-24 p-2 rounded-2xl bg-card border border-border shadow-md hover:shadow-[0_10px_30px_rgba(139,92,246,0.25)] hover:border-primary/50 hover:-translate-y-1 transition-all duration-300 gap-2 pointer-events-auto">
+    <img src="${skill.icon}" alt="${skill.name}" class="w-8 h-8 sm:w-10 sm:h-10 object-contain drop-shadow-sm" loading="lazy" />
     <span class="text-[10px] sm:text-xs font-semibold text-foreground text-center leading-tight">${skill.name}</span>
   </div>
 `);
@@ -100,7 +100,7 @@ export const SkillsSection = () => {
             {skillsData.map((skill) => (
               <div
                 key={skill.name}
-                className="flex min-h-28 flex-col items-center justify-center gap-3 rounded-2xl bg-white/40 dark:bg-black/40 backdrop-blur-md border border-primary/20 p-4 shadow-lg transition-all duration-300 hover:-translate-y-1 hover:border-primary/70 hover:shadow-[0_0_20px_rgba(139,92,246,0.35)]"
+                className="flex min-h-28 flex-col items-center justify-center gap-3 rounded-2xl bg-card border border-border p-4 shadow-md transition-all duration-300 hover:-translate-y-1 hover:border-primary/50 hover:shadow-[0_10px_30px_rgba(139,92,246,0.25)]"
               >
                 <img src={skill.icon} alt={skill.name} className="h-10 w-10 object-contain drop-shadow-md" loading="lazy" />
                 <span className="text-sm font-semibold text-foreground text-center leading-tight">{skill.name}</span>

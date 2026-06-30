@@ -34,7 +34,7 @@ export const ThemeToggle = () => {
         onClick={toggleTheme}
         className={cn
             ("fixed bottom-5 right-5 sm:top-5 sm:bottom-auto z-50 p-2.5 rounded-full transition-all duration-300",
-            "bg-card/80 border border-border shadow-lg backdrop-blur-md hover:scale-105 focus:outline-hidden"
+            "bg-card border border-border shadow-lg shadow-black/5 dark:shadow-white/5 hover:scale-105 focus:outline-hidden"
         )}
         aria-label={isDarkMode ? "Switch to light theme" : "Switch to dark theme"}
         > 
