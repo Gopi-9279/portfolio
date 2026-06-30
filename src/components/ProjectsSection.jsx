@@ -54,24 +54,37 @@ const projects = [
   }
 ];
 
-const ProjectVisual = ({ project }) => (
-  <div className={`relative h-48 overflow-hidden bg-linear-to-br ${project.accent}`}>
-    <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.65),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(15,23,42,0.35),transparent_40%)]" />
-    <div className="absolute inset-x-5 bottom-5 top-8 rounded-2xl border border-border/50 bg-card p-4 text-left shadow-xl transition-transform duration-500 group-hover:scale-105">
-      <div className="mb-5 flex gap-2">
-        <span className="h-2.5 w-2.5 rounded-full bg-red-300" />
-        <span className="h-2.5 w-2.5 rounded-full bg-yellow-200" />
-        <span className="h-2.5 w-2.5 rounded-full bg-green-300" />
+const ProjectVisual = ({ project }) => {
+  return (
+    <div className={`relative h-48 overflow-hidden bg-linear-to-r ${project.accent} bg-[size:300%_300%] animate-gradient-flow`}>
+      {/* Decorative inner glow/shadow to blend the edges */}
+      <div className="absolute inset-0 shadow-[inset_0_0_30px_rgba(0,0,0,0.2)] mix-blend-overlay"></div>
+
+      {/* Floating Lava Lamp Orbs */}
+      <div className="absolute -top-[20%] -left-[10%] w-32 h-32 bg-white/30 blur-3xl rounded-full mix-blend-overlay animate-[spin_10s_linear_infinite]" />
+      <div className="absolute -bottom-[20%] -right-[10%] w-40 h-40 bg-black/20 blur-3xl rounded-full mix-blend-overlay animate-[spin_15s_linear_infinite_reverse]" />
+      
+      {/* Additional Slow Moving Orb */}
+      <div className="absolute top-[20%] right-[20%] w-24 h-24 bg-white/20 blur-2xl rounded-full mix-blend-overlay animate-pulse" />
+
+      {/* Floating Glass Emblem */}
+      <div className="absolute inset-0 flex items-center justify-center">
+        <div className="relative z-10 w-24 h-24 rounded-full border border-white/40 flex items-center justify-center shadow-[0_8px_32px_rgba(0,0,0,0.3)] backdrop-blur-xl bg-white/10 group-hover:scale-110 group-hover:shadow-[0_12px_40px_rgba(0,0,0,0.4)] transition-all duration-500 overflow-hidden">
+          
+          {/* Subtle reflection on the glass */}
+          <div className="absolute inset-0 bg-linear-to-tr from-transparent via-white/20 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 transform group-hover:translate-x-full group-hover:-translate-y-full"></div>
+          
+          <span className="text-4xl font-black text-white relative z-10 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] tracking-tighter mix-blend-overlay">
+            {project.title.substring(0, 2).toUpperCase()}
+          </span>
+          <span className="text-4xl font-black text-white absolute z-20 drop-shadow-[0_2px_4px_rgba(0,0,0,0.5)] tracking-tighter opacity-70 group-hover:opacity-100 transition-opacity">
+            {project.title.substring(0, 2).toUpperCase()}
+          </span>
+        </div>
       </div>
-      <div className="space-y-3">
-        <div className="h-3 w-2/3 rounded-full bg-muted-foreground/40" />
-        <div className="h-3 w-full rounded-full bg-muted-foreground/20" />
-        <div className="h-3 w-4/5 rounded-full bg-muted-foreground/20" />
-      </div>
-      <div className="absolute bottom-4 right-4 h-12 w-12 rounded-full border border-border/50 bg-background shadow-sm" />
     </div>
-  </div>
-);
+  );
+};
 
 export const ProjectsSection = () => {
   return (
