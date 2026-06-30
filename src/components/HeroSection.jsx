@@ -52,14 +52,12 @@ export const HeroSection = () => {
 
       {/* Huge Background Text */}
       <div className="absolute inset-0 flex flex-col items-center justify-center pointer-events-none select-none overflow-hidden z-0 opacity-0 animate-fade-in-delay-1 w-full h-full leading-[0.75]">
-        <div className="text-[38vw] font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-b from-primary/30 to-transparent whitespace-nowrap drop-shadow-md"
-          style={{ WebkitTextStroke: 'max(2px, 0.2vw) hsl(var(--primary) / 0.6)' }}>
-          WEB
-        </div>
-        <div className="text-[14.5vw] font-black tracking-tighter text-transparent bg-clip-text bg-gradient-to-t from-primary/30 to-transparent whitespace-nowrap drop-shadow-md"
-          style={{ WebkitTextStroke: 'max(2px, 0.2vw) hsl(var(--primary) / 0.6)' }}>
-          DEVELOPER
-        </div>
+         <div className="text-[38vw] font-black tracking-tighter text-foreground/[0.07] dark:text-foreground/[0.05] whitespace-nowrap drop-shadow-sm">
+            WEB
+         </div>
+         <div className="text-[14.5vw] font-black tracking-tighter text-foreground/[0.07] dark:text-foreground/[0.05] whitespace-nowrap drop-shadow-sm">
+            DEVELOPER
+         </div>
       </div>
 
       <div className="container relative w-full h-full flex items-center justify-center mx-auto z-20">
@@ -104,7 +102,7 @@ export const HeroSection = () => {
             glareMaxOpacity={0.3}
             glareColor="white"
             glarePosition="all"
-            className="relative w-[240px] h-[320px] sm:w-[320px] sm:h-[420px] lg:w-[380px] lg:h-[500px] rounded-[2rem] p-2 bg-white/50 dark:bg-gradient-to-br dark:from-white/20 dark:via-white/5 dark:to-white/10 backdrop-blur-md border border-black/5 dark:border-white/30 shadow-[0_20px_50px_rgba(0,0,0,0.1)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.3)] z-20 group mx-auto"
+            className="relative w-[240px] h-[320px] sm:w-[320px] sm:h-[420px] lg:w-[380px] lg:h-[500px] rounded-[2rem] p-2 bg-white/80 dark:bg-gradient-to-br dark:from-white/20 dark:via-white/5 dark:to-white/10 backdrop-blur-xl border-2 border-white/60 dark:border-white/30 shadow-[0_20px_60px_rgba(0,0,0,0.15)] dark:shadow-[0_20px_50px_rgba(0,0,0,0.3)] z-20 group mx-auto"
           >
             <div className="relative w-full h-full rounded-[1.5rem] overflow-hidden bg-card border border-border/50">
               <img
