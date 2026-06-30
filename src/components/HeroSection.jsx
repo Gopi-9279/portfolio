@@ -96,13 +96,13 @@ export const HeroSection = () => {
         <div className="relative w-full min-h-[300px] h-[42vh] max-h-[460px] lg:h-[80vh] lg:max-h-[680px] flex items-center justify-center order-1 lg:order-2 opacity-0 animate-fade-in z-20">
           
           {/* Floating Tech Orbs */}
-          <div className="absolute top-1/4 left-1 sm:-left-4 md:-left-12 w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20 shadow-lg flex items-center justify-center animate-[float_6s_ease-in-out_infinite] z-30">
+          <div className="absolute top-1/4 left-1 sm:-left-4 md:-left-12 w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-card border border-border/50 shadow-lg flex items-center justify-center animate-[float_6s_ease-in-out_infinite] z-30">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original.svg" alt="React" className="w-6 h-6 sm:w-8 sm:h-8 drop-shadow-lg" />
           </div>
-          <div className="absolute bottom-1/4 right-1 sm:-right-4 md:-right-8 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20 shadow-lg flex items-center justify-center animate-[float_8s_ease-in-out_infinite_reverse] z-30">
+          <div className="absolute bottom-1/4 right-1 sm:-right-4 md:-right-8 w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-card border border-border/50 shadow-lg flex items-center justify-center animate-[float_8s_ease-in-out_infinite_reverse] z-30">
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original.svg" alt="Node.js" className="w-8 h-8 sm:w-10 sm:h-10 drop-shadow-lg" />
           </div>
-          <div className="absolute top-10 right-4 sm:right-8 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-white/10 dark:bg-black/20 backdrop-blur-md border border-white/20 shadow-lg flex items-center justify-center animate-[float_5s_ease-in-out_infinite] z-30" style={{ animationDelay: '1s' }}>
+          <div className="absolute top-10 right-4 sm:right-8 w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-card border border-border/50 shadow-lg flex items-center justify-center animate-[float_5s_ease-in-out_infinite] z-30" style={{ animationDelay: '1s' }}>
             <img src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original.svg" alt="MongoDB" className="w-5 h-5 sm:w-6 sm:h-6 drop-shadow-lg" />
           </div>
 

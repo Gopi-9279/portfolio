@@ -57,18 +57,18 @@ const projects = [
 const ProjectVisual = ({ project }) => (
   <div className={`relative h-48 overflow-hidden bg-linear-to-br ${project.accent}`}>
     <div className="absolute inset-0 bg-[radial-gradient(circle_at_top_left,rgba(255,255,255,0.65),transparent_35%),radial-gradient(circle_at_bottom_right,rgba(15,23,42,0.35),transparent_40%)]" />
-    <div className="absolute inset-x-5 bottom-5 top-8 rounded-xl border border-white/30 bg-white/20 p-4 text-left shadow-2xl backdrop-blur-sm transition-transform duration-500 group-hover:scale-105">
+    <div className="absolute inset-x-5 bottom-5 top-8 rounded-2xl border border-border/50 bg-card p-4 text-left shadow-xl transition-transform duration-500 group-hover:scale-105">
       <div className="mb-5 flex gap-2">
         <span className="h-2.5 w-2.5 rounded-full bg-red-300" />
         <span className="h-2.5 w-2.5 rounded-full bg-yellow-200" />
         <span className="h-2.5 w-2.5 rounded-full bg-green-300" />
       </div>
       <div className="space-y-3">
-        <div className="h-3 w-2/3 rounded-full bg-white/80" />
-        <div className="h-3 w-full rounded-full bg-white/45" />
-        <div className="h-3 w-4/5 rounded-full bg-white/45" />
+        <div className="h-3 w-2/3 rounded-full bg-muted-foreground/40" />
+        <div className="h-3 w-full rounded-full bg-muted-foreground/20" />
+        <div className="h-3 w-4/5 rounded-full bg-muted-foreground/20" />
       </div>
-      <div className="absolute bottom-4 right-4 h-12 w-12 rounded-full border border-white/40 bg-white/25" />
+      <div className="absolute bottom-4 right-4 h-12 w-12 rounded-full border border-border/50 bg-background shadow-sm" />
     </div>
   </div>
 );
@@ -113,7 +113,7 @@ export const ProjectsSection = () => {
             {projects.map((project, key) => (
               <SwiperSlide key={key} className="max-w-[calc(100vw-2rem)] sm:max-w-[380px]">
                 <div
-                  className="group bg-white/45 dark:bg-black/25 backdrop-blur-md border border-primary/20 rounded-xl overflow-hidden shadow-[0_4px_30px_rgba(0,0,0,0.1)] dark:shadow-[0_4px_30px_rgba(0,0,0,0.5)] hover:border-primary/80 transition-all duration-300 hover:shadow-[0_0_15px_var(--color-primary)] hover:-translate-y-1 h-full flex flex-col min-h-[450px]"
+                  className="group bg-card border border-border rounded-3xl overflow-hidden shadow-lg dark:shadow-[0_8px_30px_-10px_rgba(0,0,0,0.6)] hover:border-primary/50 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(139,92,246,0.2)] hover:-translate-y-1 h-full flex flex-col min-h-[450px]"
                 >
                   <ProjectVisual project={project} />
 

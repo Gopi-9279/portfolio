@@ -49,7 +49,7 @@ export const ContactSection = () => {
             </h3>
 
             <div className="space-y-6 justify-center">
-              <div className="flex flex-col items-center justify-center text-center space-y-3 p-6 rounded-lg bg-white/40 dark:bg-black/20 border border-primary/20 hover:border-primary/80 transition-all duration-300 hover:shadow-[0_0_15px_var(--color-primary)] hover:-translate-y-1 backdrop-blur-sm">
+              <div className="flex flex-col items-center justify-center text-center space-y-3 p-6 rounded-2xl bg-card border border-border shadow-sm hover:border-primary/50 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(139,92,246,0.15)] hover:-translate-y-1">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Mail className="h-6 w-6 text-primary" />
                 </div>
@@ -63,7 +63,7 @@ export const ContactSection = () => {
                   </a>
                 </div>
               </div>
-              <div className="flex flex-col items-center justify-center text-center space-y-3 p-6 rounded-lg bg-white/40 dark:bg-black/20 border border-primary/20 hover:border-primary/80 transition-all duration-300 hover:shadow-[0_0_15px_var(--color-primary)] hover:-translate-y-1 backdrop-blur-sm">
+              <div className="flex flex-col items-center justify-center text-center space-y-3 p-6 rounded-2xl bg-card border border-border shadow-sm hover:border-primary/50 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(139,92,246,0.15)] hover:-translate-y-1">
                 <div className="p-3 rounded-full bg-primary/10">
                   <Phone className="h-6 w-6 text-primary" />
                 </div>
@@ -77,7 +77,7 @@ export const ContactSection = () => {
                   </a>
                 </div>
               </div>
-              <div className="flex flex-col items-center justify-center text-center space-y-3 p-6 rounded-lg bg-white/40 dark:bg-black/20 border border-primary/20 hover:border-primary/80 transition-all duration-300 hover:shadow-[0_0_15px_var(--color-primary)] hover:-translate-y-1 backdrop-blur-sm">
+              <div className="flex flex-col items-center justify-center text-center space-y-3 p-6 rounded-2xl bg-card border border-border shadow-sm hover:border-primary/50 transition-all duration-300 hover:shadow-[0_10px_30px_rgba(139,92,246,0.15)] hover:-translate-y-1">
                 <div className="p-3 rounded-full bg-primary/10">
                   <MapPin className="h-6 w-6 text-primary" />
                 </div>
@@ -110,7 +110,7 @@ export const ContactSection = () => {
           </div>
 
           <form
-            className="relative h-fit space-y-6 p-5 sm:p-8 flex flex-col justify-between rounded-xl bg-white/40 dark:bg-black/40 border border-primary/30 backdrop-blur-md shadow-[0_4px_30px_rgba(0,0,0,0.1)] dark:shadow-[0_0_20px_rgba(0,0,0,0.5)] group hover:border-primary/60 transition-all duration-500"
+            className="relative h-fit space-y-6 p-5 sm:p-8 flex flex-col justify-between rounded-3xl bg-card border border-border shadow-lg dark:shadow-[0_8px_30px_-10px_rgba(0,0,0,0.5)] group hover:border-primary/50 transition-all duration-500 hover:shadow-xl"
             onSubmit={handleSubmit}
           >
             <h3 className="text-2xl font-semibold mb-6 text-foreground"> Send a Message</h3>
@@ -127,7 +127,7 @@ export const ContactSection = () => {
                   id="name"
                   name="name"
                   required
-                  className="w-full px-4 py-3 rounded-md border border-primary/30 bg-white/50 dark:bg-black/20 text-foreground focus:outline-hidden focus:border-primary focus:shadow-[0_0_15px_var(--color-primary)] transition-all duration-300 placeholder:text-muted-foreground/70 dark:placeholder:text-muted-foreground/50 backdrop-blur-sm"
+                  className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-hidden focus:border-primary focus:shadow-[0_0_15px_rgba(139,92,246,0.3)] transition-all duration-300 placeholder:text-muted-foreground/70"
                   placeholder="Gopi Kishan"
                 />
               </div>
@@ -144,7 +144,7 @@ export const ContactSection = () => {
                   id="email"
                   name="email"
                   required
-                  className="w-full px-4 py-3 rounded-md border border-primary/30 bg-white/50 dark:bg-black/20 text-foreground focus:outline-hidden focus:border-primary focus:shadow-[0_0_15px_var(--color-primary)] transition-all duration-300 placeholder:text-muted-foreground/70 dark:placeholder:text-muted-foreground/50 backdrop-blur-sm"
+                  className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-hidden focus:border-primary focus:shadow-[0_0_15px_rgba(139,92,246,0.3)] transition-all duration-300 placeholder:text-muted-foreground/70"
                   placeholder="you@example.com"
                 />
               </div>
@@ -160,7 +160,7 @@ export const ContactSection = () => {
                   id="message"
                   name="message"
                   required
-                  className="w-full px-4 py-3 rounded-md border border-primary/30 bg-white/50 dark:bg-black/20 text-foreground focus:outline-hidden focus:border-primary focus:shadow-[0_0_15px_var(--color-primary)] transition-all duration-300 placeholder:text-muted-foreground/70 dark:placeholder:text-muted-foreground/50 resize-none h-32 backdrop-blur-sm"
+                  className="w-full px-4 py-3 rounded-xl border border-border bg-background text-foreground focus:outline-hidden focus:border-primary focus:shadow-[0_0_15px_rgba(139,92,246,0.3)] transition-all duration-300 placeholder:text-muted-foreground/70 resize-none h-32"
                   placeholder="Hello, I'd like to talk about..."
                 />
               </div>
