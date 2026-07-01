@@ -1,3 +1,5 @@
+[ View Live Portfolio](https://portfolio-zeta-flame-pv4l04f17w.vercel.app)
+
 # Gopi Kishan Portfolio
 
 A modern, responsive developer portfolio built with React, Vite, and Tailwind CSS. The site presents Gopi Kishan as an aspiring full-stack MERN developer with a polished hero section, animated background effects, interactive skill showcase, featured projects, resume download, and contact form experience.
